@@ -1,5 +1,4 @@
-%h1= t('.title')
-%p= link_to t('.new_<%= singular_name %>'), new_<%= singular_name %>_path
+%h1= "Index::<%= plural_name %>"
 
 %table
   %thead
@@ -15,6 +14,8 @@
 <% for attribute in attributes -%>
         %td= <%= singular_name %>.<%= attribute.name %>
 <% end -%>
-        %td.action= link_to t('show'), <%= singular_name %>
-        %td.action= link_to t('edit'), edit_<%= singular_name %>_path(<%= singular_name %>)
-        %td.action= link_to t('destroy'), <%= singular_name %>, :confirm => t('are_you_sure'), :method => :delete
+        %td.action= link_to 'Show',     <%= singular_name %>
+        %td.action= link_to 'Edit',     edit_<%= singular_name %>_path(<%= singular_name %>)
+        %td.action= link_to 'Destroy',  <%= singular_name %>, :confirm => 'Are you sure you want to remove this record?', :method => :delete
+
+%p= link_to "New <%= singular_name %>", new_<%= singular_name %>_path
