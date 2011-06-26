@@ -1,7 +1,6 @@
 # Information about this fork
 
-This for is no longer following the normal scaffolding layout of Rails.
-It uses I18n backend for headings, model attributes names etc in it's views.
+This fork was modified so it does not use I8n. I have also arranged the action links to be at the bottom.
 
 ## Rails 3 HAML Scaffold Generator
 
